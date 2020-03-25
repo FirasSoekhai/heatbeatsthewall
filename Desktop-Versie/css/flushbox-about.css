@@ -1,0 +1,62 @@
+html{
+    font-display: auto;
+}
+main {
+  margin-left: 9%;
+  padding: 10px;
+}
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #262626;
+  color: lightgray;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 15px;
+}
+
+.activeSet {
+  background-color: #FF4500;
+}
+
+.aboutWe, .aboutFlush, .aboutContact {
+  padding-bottom: 50px;
+  font-size: 18px;
+}
+
+.aboutBold {
+  color: white;
+  font-weight: bold;
+}
+
+.aboutUnderline {
+  text-decoration: underline;
+}
+
+.noUnderline {
+  text-decoration: none;
+  color: #000;
+}
+
+.aboutFind {
+  font-size: 18px;
+}
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+}
