@@ -65,13 +65,15 @@ function getBrowser() {
 }
 $user_os        =   getOS();
 $user_browser   =   getBrowser();
+if(isset($_SERVER['HTTP_REFERER'])){
 $site_refer = $_SERVER['HTTP_REFERER'];
 	if($site_refer == ""){
 		$site = "dirrect connection";
 	}
 	else{
 		$site = $site_refer;
-	}
+    }
+}
     function logIP()
 {
       $user_os        =   getOS();
@@ -92,4 +94,3 @@ $site_refer = $_SERVER['HTTP_REFERER'];
      fclose($log);
 }
 logIp();
-?>

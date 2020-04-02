@@ -1,10 +1,11 @@
 <?php
   include "dbVars.php";
-  $con   = mysqli_connect("localhost", "root", "", "heatbeatz");
+  include "db.php";
+  $con   = dbConnect();
   $sql   = "SELECT * FROM images ORDER BY RAND()";
-  $result = mysqli_query($con, $sql);
-  if (mysqli_num_rows($result) == 0){
-    echo "<p>Er zijn nog geen foto's geupload naar FlushBox</p>";
+  $statement = $con->query($sql);
+  if ($statement->rowCount() == 0){
+    echo "<p>Er zijn nog geen foto's geupload naar HeatBeatz</p>";
     echo '<button class="modaalButton addImage hvr-pulse-grow" style="font-size: 35px; font-family: sans-serif, FontAwesome">&#xF030;</button>';
     echo '<div class="modaal">';
     echo '<form action="fileUpload.php" method="post" enctype="multipart/form-data">';
@@ -18,7 +19,7 @@
     echo '</form>';
     echo '</div>';
   } else {
-      while ($row = mysqli_fetch_array($result)) {
+      while($row = $statement->fetch()) {
           echo '<div class="card">';
           echo '<img src="uploads/' . $row['image_url'] . '" alt="' . $row['image_url'] . '" class="modaalButton">';
           echo '</div>';
@@ -50,5 +51,4 @@
       echo '</form>';
       echo '</div>';
   }
-  mysqli_close($con);
 ?>

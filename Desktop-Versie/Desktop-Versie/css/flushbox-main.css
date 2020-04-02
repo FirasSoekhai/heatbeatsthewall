@@ -161,7 +161,7 @@ hr{
   cursor: pointer;
 }
 .sluitButton:hover {
-  color: #FF4500;
+  color: black;
   outline: none;
 }
 .hvr-grow {
