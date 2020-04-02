@@ -1,0 +1,65 @@
+.right{
+    background-color: white;
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 85vw;
+    width: 15vw;
+    height: 100vh;
+    transition: left .5s ease-in-out;
+    text-align: center;
+}
+
+
+
+.right .trend{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.right .actieright{
+    color: cornsilk;
+    font-size: 1.2em;
+    padding: 1em 2em;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid cornsilk;
+}
+
+.right a.actieRight{
+    padding: 1em 1.3em;
+    border-left: .7em solid cornsilk;
+    /* border-right: .7em solid cornsilk; */
+}
+
+#menu-schuiver:checked ~ nav{
+    left: 100vw;
+}
+
+#menu-schuiver{
+    display: none;
+}
+label.haal-menu{
+    padding: 1rem 2rem;
+    display: block;
+    text-align: right;
+    font-size: 2em;
+}
+label.haal-menu2{
+    display: block;
+}
+.fa-align-justify:before {
+    color: white;
+}
+.fa-window-close:before{
+    color: black;
+}
+
+.right .rips{
+    width: 10px;
+    height: 10px;
+}
+.right .hotdrop{
+    font-size: x-large;
+}
